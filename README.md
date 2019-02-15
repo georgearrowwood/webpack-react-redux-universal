@@ -6,16 +6,10 @@ Basic setup for react based project. After spending sometime looking on web for 
 * Uses Redux for state management
 * Uses Jest for testing
 * Uses React Route v4
-* Dokerized
 * Has basic auth setup
 
 ## How to run
 
-To run it in dev mode
-* for server and client in watch dev mode
-```
-  docker-compose up
-```
 Then open in the browser:
 ```
   http://localhost:8080/
@@ -53,11 +47,3 @@ To build client for production run
 npm run client-build
 ```
 
-To build image:
-```
-docker build -t appname .
-```
-To run image:
-```
-docker run -p 8081:8081 appname
-```
