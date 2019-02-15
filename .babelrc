@@ -1,0 +1,13 @@
+{
+  "presets": ["env", "react", "stage-0"],
+  "plugins": ["react-hot-loader/babel"],
+  "env": {
+    "node": {
+      "plugins": [
+        [
+          "babel-plugin-transform-require-ignore", { "extensions": [".scss", ".css"] }
+        ]
+      ]
+    }
+  }
+}
