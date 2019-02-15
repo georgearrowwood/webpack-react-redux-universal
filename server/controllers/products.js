@@ -14,17 +14,10 @@ const productsController = {
       res.send({ products });
     }, 700);
   },
-  addOne: (req, res) => {
-    if (req.body.product && req.body.product.title) {
-      products.push({ id: newId(), title: req.body.product.title });
-      res.send({ success: true });
-    } else {
-      res.send({ success: false });
-    }
-  },
-  delete: (req, res) => {
-    products = products.filter(item => item.id !== parseInt(req.params.id, 10));
-    res.send({ success: true });
+
+  getOne: (req, res) => {
+    const product = products.find(item => item.id === parseInt(req.params.id, 10));
+    res.send(product);
   },
 };
 

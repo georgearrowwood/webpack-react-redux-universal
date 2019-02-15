@@ -5,7 +5,6 @@ import productsController from '../controllers/products';
 const router = express.Router();
 
 router.get('/products', productsController.getList);
-router.post('/products', productsController.addOne);
-router.delete('/products/:id', productsController.delete);
+router.get('/products/:id', productsController.getOne);
 
 export default router;
